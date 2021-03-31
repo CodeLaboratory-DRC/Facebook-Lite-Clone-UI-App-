@@ -69,63 +69,139 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 10,
                 thickness: 10,
               ),
-              
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      height: 45,
+                      width: 80,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(Radius.circular(30)),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black38,
+                              offset: Offset(1, 1),
+                              spreadRadius: 1,
+                              blurRadius: 3,
+                            )
+                          ]),
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.video_call,
+                            color: Colors.deepPurple[600],
+                          ),
+                          Flexible(
+                            child: Text(
+                              "Crée un salon",
+                              style: TextStyle(
+                                fontSize: 12.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue[600],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  CircleAvatar(
+                    radius: 20.0,
+                    backgroundColor: Colors.grey,
+                    child: Text(
+                      "?",
+                      style: TextStyle(
+                        color: Colors.white70,
+                      ),
+                    ),
+                  ),
+                  CircleAvatar(
+                    radius: 20.0,
+                    backgroundColor: Colors.grey,
+                    child: Text(
+                      "?",
+                      style: TextStyle(
+                        color: Colors.white70,
+                      ),
+                    ),
+                  ),
+                  CircleAvatar(
+                    radius: 20.0,
+                    backgroundColor: Colors.grey,
+                    child: Text(
+                      "?",
+                      style: TextStyle(
+                        color: Colors.white70,
+                      ),
+                    ),
+                  )
+                  ,CircleAvatar(
+                    radius: 20.0,
+                    backgroundColor: Colors.grey,
+                    child: Text(
+                      "?",
+                      style: TextStyle(
+                        color: Colors.white70,
+                      ),
+                    ),
+                  )
+                ],
+              )
             ],
           )),
     );
   }
 
-  Padding _bodySndHeader() {
+  Widget _bodySndHeader() {
     return Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.menu_book_rounded,
-                        size: 20.0,
-                        color: Colors.blue,
-                      ),
-                      Text(
-                        "Texte",
-                        style: TextStyle(
-                            fontSize: 15.0, fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.video_call,
-                        size: 20.0,
-                        color: Colors.red,
-                      ),
-                      Text(
-                        "Vidéo en",
-                        style: TextStyle(
-                            fontSize: 15.0, fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.video_call,
-                        size: 20.0,
-                        color: Colors.purple,
-                      ),
-                      Text(
-                        "Salon",
-                        style: TextStyle(
-                            fontSize: 15.0, fontWeight: FontWeight.bold),
-                      )
-                    ],
-                  )
-                ],
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Row(
+            children: [
+              Icon(
+                Icons.menu_book_rounded,
+                size: 20.0,
+                color: Colors.blue,
               ),
-            );
+              Text(
+                "Texte",
+                style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              Icon(
+                Icons.video_call,
+                size: 20.0,
+                color: Colors.red,
+              ),
+              Text(
+                "Vidéo en",
+                style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              Icon(
+                Icons.video_call,
+                size: 20.0,
+                color: Colors.purple,
+              ),
+              Text(
+                "Salon",
+                style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
+              )
+            ],
+          )
+        ],
+      ),
+    );
   }
 
   Widget _bodyHeader() {
