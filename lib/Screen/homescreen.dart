@@ -58,6 +58,26 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               _blackHeader(_height),
               _whiteHeader(_height),
+              Divider(
+                color: Colors.grey[400],
+                height: 10,
+              ),
+              SingleChildScrollView(
+                              child: Container(
+                  child: Column(
+                    children: [
+                      
+                      Row( children: [
+                        CircleAvatar(
+                    radius: 30.0,
+                    backgroundColor: Colors.transparent,
+                    child: Icon(Icons.account_circle, size: 75, color: Colors.grey,))
+                  
+                      ],)
+                    ],
+                  ),
+                ),
+              )
             ],
           )),
     );
@@ -200,8 +220,8 @@ class _HomeScreenState extends State<HomeScreen> {
       right: 0.0,
       child: ClipRRect(
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(30.0),
-          topRight: Radius.circular(30.0),
+          topLeft: Radius.circular(0.0),
+          topRight: Radius.circular(0.0),
         ),
         child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
@@ -209,7 +229,12 @@ class _HomeScreenState extends State<HomeScreen> {
           onTap: (int tab) {
             setState(() {
               _selectedTab = tab;
-              if (tab == 0 || tab == 1 || tab == 2 || tab == 3 || tab == 4 || tab == 5) {
+              if (tab == 0 ||
+                  tab == 1 ||
+                  tab == 2 ||
+                  tab == 3 ||
+                  tab == 4 ||
+                  tab == 5) {
                 _currentPage = _pages[tab];
               }
             });
@@ -217,16 +242,13 @@ class _HomeScreenState extends State<HomeScreen> {
           items: [
             BottomNavigationBarItem(
                 icon: Icon(Icons.home,
-                    color: _selectedTab == 0
-                        ? Colors.white
-                        : Colors.blue),
+                    color: _selectedTab == 0 ? Colors.white : Colors.blue),
                 // ignore: deprecated_member_use
                 title: Text("")),
             BottomNavigationBarItem(
                 icon: Icon(Icons.group_rounded,
-                    color: _selectedTab == 1
-                        ? Colors.grey[800]
-                        : Colors.red[900]),
+                    color:
+                        _selectedTab == 1 ? Colors.grey[800] : Colors.red[900]),
                 // ignore: deprecated_member_use
                 title: Text("")),
             BottomNavigationBarItem(
@@ -236,26 +258,43 @@ class _HomeScreenState extends State<HomeScreen> {
                         : Colors.grey[800]),
                 // ignore: deprecated_member_use
                 title: Text("")),
-            
             BottomNavigationBarItem(
-                icon: Icon(Icons.notification_important,
-                    color: _selectedTab == 1
-                        ? Colors.grey[800]
-                        : Colors.red[900]),
+                icon: Badge(
+                  badgeContent: Text(
+                    "1",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  child: Icon(Icons.notification_important,
+                      color: _selectedTab == 1
+                          ? Colors.grey[800]
+                          : Colors.red[900]),
+                ),
                 // ignore: deprecated_member_use
                 title: Text("")),
-                BottomNavigationBarItem(
-                icon: Icon(Icons.ondemand_video_outlined,
-                    color: _selectedTab == 1
-                        ? Colors.grey[800]
-                        : Colors.red[900]),
+            BottomNavigationBarItem(
+                icon: Badge(
+                  badgeContent: Text(
+                    "6",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  child: Icon(Icons.ondemand_video_outlined,
+                      color: _selectedTab == 1
+                          ? Colors.grey[800]
+                          : Colors.red[900]),
+                ),
                 // ignore: deprecated_member_use
                 title: Text("")),
-                BottomNavigationBarItem(
-                icon: Icon(Icons.group_work_rounded,
-                    color: _selectedTab == 1
-                        ? Colors.grey[800]
-                        : Colors.red[900]),
+            BottomNavigationBarItem(
+                icon: Badge(
+                  badgeContent: Text(
+                    "8",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  child: Icon(Icons.group_work_rounded,
+                      color: _selectedTab == 1
+                          ? Colors.grey[800]
+                          : Colors.red[900]),
+                ),
                 // ignore: deprecated_member_use
                 title: Text("")),
           ],
