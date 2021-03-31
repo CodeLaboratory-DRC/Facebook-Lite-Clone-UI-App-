@@ -62,24 +62,124 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Colors.grey[400],
                 height: 10,
               ),
-              SingleChildScrollView(
-                              child: Container(
-                  child: Column(
-                    children: [
-                      
-                      Row( children: [
-                        CircleAvatar(
-                    radius: 30.0,
-                    backgroundColor: Colors.transparent,
-                    child: Icon(Icons.account_circle, size: 75, color: Colors.grey,))
-                  
-                      ],)
-                    ],
-                  ),
-                ),
-              )
+              _bodyHeader(),
+              _bodySndHeader(),
+              Divider(
+                color: Colors.grey[400],
+                height: 10,
+                thickness: 10,
+              ),
+              
             ],
           )),
+    );
+  }
+
+  Padding _bodySndHeader() {
+    return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.menu_book_rounded,
+                        size: 20.0,
+                        color: Colors.blue,
+                      ),
+                      Text(
+                        "Texte",
+                        style: TextStyle(
+                            fontSize: 15.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.video_call,
+                        size: 20.0,
+                        color: Colors.red,
+                      ),
+                      Text(
+                        "Vidéo en",
+                        style: TextStyle(
+                            fontSize: 15.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.video_call,
+                        size: 20.0,
+                        color: Colors.purple,
+                      ),
+                      Text(
+                        "Salon",
+                        style: TextStyle(
+                            fontSize: 15.0, fontWeight: FontWeight.bold),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            );
+  }
+
+  Widget _bodyHeader() {
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CircleAvatar(
+                    radius: 30.0,
+                    backgroundColor: Colors.transparent,
+                    child: Icon(
+                      Icons.account_circle,
+                      size: 65,
+                      color: Colors.grey,
+                    )),
+                SizedBox(
+                  width: 10.0,
+                ),
+                Flexible(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: "A quoi pensez vous ?",
+                      border: const OutlineInputBorder(),
+                      // filled: true,
+                    ),
+                  ),
+                ),
+                VerticalDivider(),
+                Column(
+                  children: [
+                    Icon(
+                      Icons.photo_size_select_actual_outlined,
+                      color: Colors.grey,
+                    ),
+                    Text("Photo",
+                        style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500))
+                  ],
+                )
+              ],
+            ),
+          ),
+          Divider(
+            color: Colors.grey[400],
+            height: 10,
+          ),
+        ],
+      ),
     );
   }
 
@@ -138,7 +238,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _whiteHeader(double _height) {
     return Container(
-      height: _height * 0.20,
+      height: _height * 0.17,
       color: Colors.white,
       child: Stack(
         children: [
@@ -182,7 +282,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   radius: 20.0,
                   backgroundColor: Colors.grey[400],
                   child: Icon(
-                    Icons.account_circle_rounded,
+                    Icons.account_circle_sharp,
                     color: Colors.black,
                   ),
                 ),
@@ -193,7 +293,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: EdgeInsets.only(top: 1.0),
                   badgeContent: Icon(
                     Icons.arrow_downward_rounded,
-                    size: 25.0,
+                    size: 22.0,
                     color: Colors.white,
                   ),
                   child: CircleAvatar(
