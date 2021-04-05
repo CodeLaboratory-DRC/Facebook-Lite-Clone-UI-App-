@@ -8,8 +8,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-        child: Column(children: [
+    return Column(children: [
       Divider(
         color: Colors.grey[400],
         height: 10,
@@ -27,7 +26,51 @@ class _HomeScreenState extends State<HomeScreen> {
         height: 10,
         thickness: 10,
       ),
-    ]));
+      Padding(
+        padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
+        child: Row(
+          children: [
+            Container(
+              width: 115.0,
+              height: 180.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("assets/images/FbPic.jpg"), fit: BoxFit.cover),
+                borderRadius: BorderRadius.all(Radius.circular(15)),
+                border: Border.all(color: Colors.white),
+              ),
+            ),
+            SizedBox(width: 10.0,),
+            Container(
+              width: 115.0,
+              height: 180.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("assets/images/FbPic.jpg"), fit: BoxFit.cover),
+                borderRadius: BorderRadius.all(Radius.circular(15)),
+                border: Border.all(color: Colors.white),
+              ),
+            ),
+            SizedBox(width: 10.0,),
+            Container(
+              width: 115.0,
+              height: 180.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("assets/images/FbPic.jpg"), fit: BoxFit.cover),
+                borderRadius: BorderRadius.all(Radius.circular(15)),
+                border: Border.all(color: Colors.white),
+              ),
+            ),
+          ],
+        ),
+      ),
+      Divider(
+        color: Colors.grey[300],
+        height: 10,
+        thickness: 10,
+      ),
+    ]);
   }
 
   Widget _bodySalonPics() {
@@ -59,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     Flexible(
                       child: Text(
-                        "Crée un salon",
+                        "Créer un salon",
                         style: TextStyle(
                           fontSize: 12.0,
                           fontWeight: FontWeight.bold,

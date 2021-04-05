@@ -67,7 +67,7 @@ class _PageAccueilState extends State<PageAccueil> {
               // _bodyHeader(),
               // _bodySndHeader(),
 
-              _currentPage
+              Flexible(child: SingleChildScrollView(child: _currentPage))
             ],
           )),
     );
@@ -204,7 +204,7 @@ class _PageAccueilState extends State<PageAccueil> {
 
   _bottomnavigator() {
     return Positioned(
-      bottom: 0.0,
+      bottom: -10.0,
       left: 0.0,
       right: 0.0,
       child: ClipRRect(
@@ -213,6 +213,7 @@ class _PageAccueilState extends State<PageAccueil> {
           topRight: Radius.circular(0.0),
         ),
         child: BottomNavigationBar(
+          backgroundColor: Colors.white,
           type: BottomNavigationBarType.fixed,
           currentIndex: _selectedTab,
           onTap: (int tab) {
@@ -231,16 +232,17 @@ class _PageAccueilState extends State<PageAccueil> {
           items: [
             BottomNavigationBarItem(
                 icon: Icon(Icons.home,
+                    size: 30,
                     color: _selectedTab == 0 ? Colors.blue : Colors.grey[800]),
                 // ignore: deprecated_member_use
                 title: Text("")),
             BottomNavigationBarItem(
-                icon: Icon(Icons.group_rounded,
+                icon: Icon(Icons.group_rounded,size: 30,
                     color: _selectedTab == 1 ? Colors.blue : Colors.grey[800]),
                 // ignore: deprecated_member_use
                 title: Text("")),
             BottomNavigationBarItem(
-                icon: Icon(Icons.source_rounded,
+                icon: Icon(Icons.source_rounded,size: 30,
                     color: _selectedTab == 2 ? Colors.blue : Colors.grey[800]),
                 // ignore: deprecated_member_use
                 title: Text("")),
@@ -250,7 +252,7 @@ class _PageAccueilState extends State<PageAccueil> {
                     "1",
                     style: TextStyle(color: Colors.white),
                   ),
-                  child: Icon(Icons.notification_important,
+                  child: Icon(Icons.notification_important,size: 30,
                       color:
                           _selectedTab == 3 ? Colors.blue : Colors.grey[800]),
                 ),
@@ -262,7 +264,7 @@ class _PageAccueilState extends State<PageAccueil> {
                     "6",
                     style: TextStyle(color: Colors.white),
                   ),
-                  child: Icon(Icons.ondemand_video_outlined,
+                  child: Icon(Icons.ondemand_video_outlined,size: 30,
                       color:
                           _selectedTab == 4 ? Colors.blue : Colors.grey[800]),
                 ),
@@ -274,7 +276,7 @@ class _PageAccueilState extends State<PageAccueil> {
                     "8",
                     style: TextStyle(color: Colors.white),
                   ),
-                  child: Icon(Icons.group_work_rounded,
+                  child: Icon(Icons.group_work_rounded,size: 30,
                       color:
                           _selectedTab == 5 ? Colors.blue : Colors.grey[800]),
                 ),
