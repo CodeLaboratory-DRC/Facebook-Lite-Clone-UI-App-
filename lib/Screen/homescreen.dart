@@ -27,39 +27,153 @@ class _HomeScreenState extends State<HomeScreen> {
         thickness: 10,
       ),
       Padding(
-        padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
+        padding: const EdgeInsets.only(left: 10.0, top: 10.0, bottom: 10.0),
         child: Row(
           children: [
-            Container(
-              width: 115.0,
-              height: 180.0,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/images/FbPic.jpg"), fit: BoxFit.cover),
-                borderRadius: BorderRadius.all(Radius.circular(15)),
-                border: Border.all(color: Colors.white),
-              ),
-            ),
-            SizedBox(width: 10.0,),
-            Container(
-              width: 115.0,
-              height: 180.0,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/images/FbPic.jpg"), fit: BoxFit.cover),
-                borderRadius: BorderRadius.all(Radius.circular(15)),
-                border: Border.all(color: Colors.white),
-              ),
-            ),
-            SizedBox(width: 10.0,),
-            Container(
-              width: 115.0,
-              height: 180.0,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/images/FbPic.jpg"), fit: BoxFit.cover),
-                borderRadius: BorderRadius.all(Radius.circular(15)),
-                border: Border.all(color: Colors.white),
+            Expanded(
+              child: Container(
+                height: 180.0,
+                child: ListView(
+                  physics: BouncingScrollPhysics(),
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Container(
+                      width: 115.0,
+                      height: 180.0,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey),
+                        borderRadius: BorderRadius.all(Radius.circular(15)),
+                      ),
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 100,
+                            decoration: BoxDecoration(
+                              color: Colors.grey[400],
+                              border: Border.all(color: Colors.grey),
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(15),
+                                  topRight: Radius.circular(15)),
+                            ),
+                          ),
+                          CircleAvatar(
+                            radius: 15.0,
+                            child: Icon(Icons.add_circle_outline),
+                          ),
+                          SizedBox(
+                            height: 20.0,
+                          ),
+                          Text(
+                            "Créer un story",
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Container(
+                      width: 115.0,
+                      height: 180.0,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/FbPic.jpg"),
+                            fit: BoxFit.cover),
+                        borderRadius: BorderRadius.all(Radius.circular(15)),
+                        border: Border.all(color: Colors.white),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Row(
+                            children: [
+                              Text(
+                                "Célestin \nDjumah",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10.0,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Container(
+                      width: 115.0,
+                      height: 180.0,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/FbPic.jpg"),
+                            fit: BoxFit.cover),
+                        borderRadius: BorderRadius.all(Radius.circular(15)),
+                        border: Border.all(color: Colors.white),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Container(
+                      width: 115.0,
+                      height: 180.0,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/FbPic.jpg"),
+                            fit: BoxFit.cover),
+                        borderRadius: BorderRadius.all(Radius.circular(15)),
+                        border: Border.all(color: Colors.white),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Container(
+                      width: 115.0,
+                      height: 180.0,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/FbPic.jpg"),
+                            fit: BoxFit.cover),
+                        borderRadius: BorderRadius.all(Radius.circular(15)),
+                        border: Border.all(color: Colors.white),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Container(
+                      width: 115.0,
+                      height: 180.0,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/FbPic.jpg"),
+                            fit: BoxFit.cover),
+                        borderRadius: BorderRadius.all(Radius.circular(15)),
+                        border: Border.all(color: Colors.white),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Container(
+                      width: 115.0,
+                      height: 180.0,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/FbPic.jpg"),
+                            fit: BoxFit.cover),
+                        borderRadius: BorderRadius.all(Radius.circular(15)),
+                        border: Border.all(color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
@@ -77,45 +191,9 @@ class _HomeScreenState extends State<HomeScreen> {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 15.0, top: 10.0, bottom: 10.0),
+          padding: const EdgeInsets.only(left: 15.0, top: 8.0, bottom: 8.0),
           child: Row(
             children: [
-              Container(
-                height: 45,
-                width: 80,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(30)),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black38,
-                        offset: Offset(1, 1),
-                        spreadRadius: 1,
-                        blurRadius: 3,
-                      )
-                    ]),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.video_call,
-                      color: Colors.deepPurple[600],
-                    ),
-                    Flexible(
-                      child: Text(
-                        "Créer un salon",
-                        style: TextStyle(
-                          fontSize: 12.0,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.blue[600],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 10.0,
-              ),
               Expanded(
                 child: Container(
                   height: 50,
@@ -123,6 +201,42 @@ class _HomeScreenState extends State<HomeScreen> {
                     physics: BouncingScrollPhysics(),
                     scrollDirection: Axis.horizontal,
                     children: [
+                      Container(
+                        height: 45,
+                        width: 80,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black38,
+                                offset: Offset(1, 1),
+                                spreadRadius: 1,
+                                blurRadius: 3,
+                              )
+                            ]),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.video_call,
+                              color: Colors.deepPurple[600],
+                            ),
+                            Flexible(
+                              child: Text(
+                                "Créer un salon",
+                                style: TextStyle(
+                                  fontSize: 12.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.blue[600],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10.0,
+                      ),
                       CircleAvatar(
                         radius: 25.0,
                         backgroundImage: AssetImage("assets/images/FbPic.jpg"),
