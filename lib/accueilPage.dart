@@ -67,7 +67,9 @@ class _PageAccueilState extends State<PageAccueil> {
               // _bodyHeader(),
               // _bodySndHeader(),
 
-              Flexible(child: SingleChildScrollView(child: _currentPage))
+              Flexible(child: SingleChildScrollView(
+                // physics: BouncingScrollPhysics(),
+                child: _currentPage))
             ],
           )),
     );
