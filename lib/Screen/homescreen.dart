@@ -565,10 +565,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                     color: Colors.grey[300],
                                     borderRadius: BorderRadius.circular(30.0),
                                   ),
-                                  child: TextFormField(
-                                    decoration: InputDecoration(
-                                        hintText: "    Ecrivez un message ...",
-                                        border: InputBorder.none),
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                                    child: TextFormField(
+                                      decoration: InputDecoration(
+                                          hintText: "Ecrivez un message ...",
+                                          border: InputBorder.none),
+                                    ),
                                   ),
                                 ),
                               ),
