@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -73,103 +74,283 @@ class _HomeScreenState extends State<HomeScreen> {
                     SizedBox(
                       width: 10.0,
                     ),
-                    Container(
-                      width: 115.0,
-                      height: 180.0,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/FbPic.jpg"),
-                            fit: BoxFit.cover),
-                        borderRadius: BorderRadius.all(Radius.circular(15)),
-                        border: Border.all(color: Colors.white),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Row(
-                            children: [
-                              Text(
-                                "Célestin \nDjumah",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Container(
-                      width: 115.0,
-                      height: 180.0,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/FbPic.jpg"),
-                            fit: BoxFit.cover),
-                        borderRadius: BorderRadius.all(Radius.circular(15)),
-                        border: Border.all(color: Colors.white),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Container(
-                      width: 115.0,
-                      height: 180.0,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/FbPic.jpg"),
-                            fit: BoxFit.cover),
-                        borderRadius: BorderRadius.all(Radius.circular(15)),
-                        border: Border.all(color: Colors.white),
+                    Badge(
+                      badgeColor: Colors.blue,
+                      badgeContent: Text("1",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          )),
+                      shape: BadgeShape.square,
+                      padding: EdgeInsets.all(8),
+                      borderRadius: BorderRadius.circular(5),
+                      position: BadgePosition(top: 10.0, end: 10.0),
+                      child: Container(
+                        width: 115.0,
+                        height: 180.0,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/images/FbPic.jpg"),
+                              fit: BoxFit.cover),
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          border: Border.all(color: Colors.white),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: 10.0,
+                                ),
+                                Text(
+                                  "Célestin \nDjumah",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(
                       width: 10.0,
                     ),
-                    Container(
-                      width: 115.0,
-                      height: 180.0,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/FbPic.jpg"),
-                            fit: BoxFit.cover),
-                        borderRadius: BorderRadius.all(Radius.circular(15)),
-                        border: Border.all(color: Colors.white),
+                    Badge(
+                      badgeColor: Colors.blue,
+                      badgeContent: Text("2",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          )),
+                      shape: BadgeShape.square,
+                      padding: EdgeInsets.all(8),
+                      borderRadius: BorderRadius.circular(5),
+                      position: BadgePosition(top: 10.0, end: 10.0),
+                      child: Container(
+                        width: 115.0,
+                        height: 180.0,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/images/FbPic.jpg"),
+                              fit: BoxFit.cover),
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          border: Border.all(color: Colors.white),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: 10.0,
+                                ),
+                                Text(
+                                  "Célestin \nDjumah",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(
                       width: 10.0,
                     ),
-                    Container(
-                      width: 115.0,
-                      height: 180.0,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/FbPic.jpg"),
-                            fit: BoxFit.cover),
-                        borderRadius: BorderRadius.all(Radius.circular(15)),
-                        border: Border.all(color: Colors.white),
+                    Badge(
+                      badgeColor: Colors.blue,
+                      badgeContent: Text("3",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          )),
+                      shape: BadgeShape.square,
+                      padding: EdgeInsets.all(8),
+                      borderRadius: BorderRadius.circular(5),
+                      position: BadgePosition(top: 10.0, end: 10.0),
+                      child: Container(
+                        width: 115.0,
+                        height: 180.0,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/images/FbPic.jpg"),
+                              fit: BoxFit.cover),
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          border: Border.all(color: Colors.white),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: 10.0,
+                                ),
+                                Text(
+                                  "Célestin \nDjumah",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(
                       width: 10.0,
                     ),
-                    Container(
-                      width: 115.0,
-                      height: 180.0,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/FbPic.jpg"),
-                            fit: BoxFit.cover),
-                        borderRadius: BorderRadius.all(Radius.circular(15)),
-                        border: Border.all(color: Colors.white),
+                    Badge(
+                      badgeColor: Colors.blue,
+                      badgeContent: Text("4",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          )),
+                      shape: BadgeShape.square,
+                      padding: EdgeInsets.all(8),
+                      borderRadius: BorderRadius.circular(5),
+                      position: BadgePosition(top: 10.0, end: 10.0),
+                      child: Container(
+                        width: 115.0,
+                        height: 180.0,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/images/FbPic.jpg"),
+                              fit: BoxFit.cover),
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          border: Border.all(color: Colors.white),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: 10.0,
+                                ),
+                                Text(
+                                  "Célestin \nDjumah",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Badge(
+                      badgeColor: Colors.blue,
+                      badgeContent: Text("5",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          )),
+                      shape: BadgeShape.square,
+                      padding: EdgeInsets.all(8),
+                      borderRadius: BorderRadius.circular(5),
+                      position: BadgePosition(top: 10.0, end: 10.0),
+                      child: Container(
+                        width: 115.0,
+                        height: 180.0,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/images/FbPic.jpg"),
+                              fit: BoxFit.cover),
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          border: Border.all(color: Colors.white),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: 10.0,
+                                ),
+                                Text(
+                                  "Célestin \nDjumah",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Badge(
+                      badgeColor: Colors.blue,
+                      badgeContent: Text("6",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          )),
+                      shape: BadgeShape.square,
+                      padding: EdgeInsets.all(8),
+                      borderRadius: BorderRadius.circular(5),
+                      position: BadgePosition(top: 10.0, end: 10.0),
+                      child: Container(
+                        width: 115.0,
+                        height: 180.0,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/images/FbPic.jpg"),
+                              fit: BoxFit.cover),
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          border: Border.all(color: Colors.white),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: 10.0,
+                                ),
+                                Text(
+                                  "Célestin \nDjumah",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
