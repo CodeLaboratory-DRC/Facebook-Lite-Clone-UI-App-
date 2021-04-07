@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   bool onComment = false;
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Divider(
         color: Colors.grey[400],
         height: 10,
@@ -45,52 +45,241 @@ class _HomeScreenState extends State<HomeScreen> {
         height: 10,
         thickness: 10,
       ),
-      // _bodyPubs(),
-      // Divider(
-      //   color: Colors.grey[300],
-      //   height: 10,
-      //   thickness: 10,
-      // ),
-      // _bodyPubs(),
-      // Divider(
-      //   color: Colors.grey[300],
-      //   height: 10,
-      //   thickness: 10,
-      // ),
-      // _bodyPubs(),
-      // Divider(
-      //   color: Colors.grey[300],
-      //   height: 10,
-      //   thickness: 10,
-      // ),
-      // SizedBox(
-      //   height: 50.0,
-      // ),
-      // Center(
-      //   child: CircularProgressIndicator(),
-      // ),
-      // SizedBox(
-      //   height: 50.0,
-      // ),
-      Container(
-        height: 300,
-        child: Row(children: [
+      _bodyPubs(),
+      Divider(
+        color: Colors.grey[300],
+        height: 10,
+        thickness: 10,
+      ),
+      _bodyGroupes(),
+      Divider(
+        color: Colors.grey[300],
+        height: 10,
+        thickness: 10,
+      ),
+      _bodyPubs(),
+      Divider(
+        color: Colors.grey[300],
+        height: 10,
+        thickness: 10,
+      ),
+      _bodyStories(),
+      Divider(
+        color: Colors.grey[300],
+        height: 10,
+        thickness: 10,
+      ),
+      _bodyPubs(),
+      Divider(
+        color: Colors.grey[300],
+        height: 10,
+        thickness: 10,
+      ),
+      SizedBox(
+        height: 50.0,
+      ),
+      Center(
+        child: CircularProgressIndicator(),
+      ),
+      SizedBox(
+        height: 50.0,
+      ),
+    ]);
+  }
 
-        ListView(
-                physics: BouncingScrollPhysics(),
-                scrollDirection: Axis.horizontal,
+  Widget _bodyGroupes() {
+    return Padding(
+      padding: const EdgeInsets.only(top: 10.0, left: 10.0, bottom: 10.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text("Groupes suggérés",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17.0)),
+          SizedBox(
+            height: 10.0,
+          ),
+          Container(
+            height: 420,
+            width: double.infinity,
+            child: Row(
+              children: [
+                Expanded(
+                  child: ListView(
+                      physics: BouncingScrollPhysics(),
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        _groupes(),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        _groupes(),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        _groupes(),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        _groupes(),
+                      ]),
+                )
+              ],
+            ),
+          ),
+          SizedBox(height: 10.0),
+          Padding(
+            padding: const EdgeInsets.only(left: 50.0, right: 50.0),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text("Découvrir plus de groupes",
+                    style: TextStyle(
+                        fontWeight: FontWeight.normal, fontSize: 17.0)),
+                SizedBox(
+                  width: 1.0,
+                ),
+                Icon(Icons.arrow_forward_ios_outlined, size: 20.0),
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
+  Container _groupes() {
+    return Container(
+      decoration: BoxDecoration(
+          border: Border.all(color: Colors.grey[200]),
+          borderRadius: BorderRadius.all(Radius.circular(15.0))),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            height: 230,
+            width: 250,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/images/FbPic.jpg"),
+                  fit: BoxFit.cover),
+              border: Border.all(color: Colors.grey[200]),
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(15), topRight: Radius.circular(15)),
+            ),
+          ),
+          Flexible(
+            child: Container(
+              height: 170,
+              width: 250,
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    top: 10.0, bottom: 1.0, left: 10.0, right: 10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Passionnés de\nla Programmation",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 18.0),
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "61k membres",
+                          style: TextStyle(
+                              fontStyle: FontStyle.normal,
+                              color: Colors.grey,
+                              fontSize: 16.0),
+                        ),
+                        SizedBox(
+                          width: 4.0,
+                        ),
+                        Icon(
+                          Icons.fiber_manual_record,
+                          size: 5.0,
+                          color: Colors.grey,
+                        ),
+                        SizedBox(
+                          width: 4.0,
+                        ),
+                        Text(
+                          "200 publications",
+                          style: TextStyle(
+                              fontStyle: FontStyle.normal,
+                              color: Colors.grey,
+                              fontSize: 16.0),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10.0),
+                    Expanded(
+                      child: Row(
+                        children: [
+                          CircleAvatar(
+                            radius: 15.0,
+                            backgroundImage:
+                                AssetImage("assets/images/FbPic.jpg"),
+                          ),
+                          SizedBox(width: 10.0),
+                          Expanded(
+                            child: Text(
+                              "Parce que vous avez consulté Staff des Programmeurs",
+                              style: TextStyle(
+                                  fontStyle: FontStyle.normal,
+                                  color: Colors.grey,
+                                  fontSize: 12.0),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Container(
+            width: 250,
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    width: 115.0,
-                    height: 180.0,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey),
-                      borderRadius: BorderRadius.all(Radius.circular(15)),
-                    ),
-                    child:Column(),)])
-
-      ],),)
-    ]);
+                      height: 45.0,
+                      width: 130.0,
+                      decoration: BoxDecoration(
+                          color: Colors.blue,
+                          border: Border.all(color: Colors.blue),
+                          borderRadius: BorderRadius.all(Radius.circular(8.0))),
+                      child: Center(
+                          child: Text("Rejoindre",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 17.0,
+                                  fontStyle: FontStyle.normal,
+                                  fontWeight: FontWeight.bold)))),
+                  Container(
+                      height: 45.0,
+                      width: 80.0,
+                      decoration: BoxDecoration(
+                          color: Colors.grey[300],
+                          border: Border.all(color: Colors.grey[300]),
+                          borderRadius: BorderRadius.all(Radius.circular(8.0))),
+                      child: Center(
+                          child: Text("Apreçu",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 17.0,
+                                  fontStyle: FontStyle.normal,
+                                  fontWeight: FontWeight.bold)))),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   Widget _bodyPubs() {

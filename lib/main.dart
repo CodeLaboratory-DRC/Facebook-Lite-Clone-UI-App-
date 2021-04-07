@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       builder: () => MaterialApp(
         
         debugShowCheckedModeBanner: false,
-        title: 'Flutter_Money_Transfert_App',
+        title: 'FBL_Clone',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
